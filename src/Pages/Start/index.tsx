@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { ScrollView, View, Image, Text, StyleSheet } from 'react-native';
 import LifeStatus from '../../Components/Common/LifeStatus';
+import DefaultButton from '../../Components/Common/DefaultButton';
+import { useNavigation } from '@react-navigation/native';
 
 export default function StartPage() {
+  const navigation = useNavigation();
+  const handleNavAppExplanation = useCallback(() => {
+    // @ts-ignore
+    navigation.navigate('AppExplanationPage');
+  }, []);
+
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -16,6 +24,12 @@ export default function StartPage() {
             Vamos transformar sua vida {'\n'} em jogo, buscando sempre {'\n'} o
             melhor nível.
           </Text>
+          <DefaultButton
+            buttonText="Continuar"
+            handlePress={handleNavAppExplanation}
+            width={250}
+            height={50}
+          />
         </View>
       </ScrollView>
     </View>

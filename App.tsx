@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
       <Routes />
-      <StatusBar style="dark" />
+      <StatusBar style="auto" />
     </>
   );
 }
