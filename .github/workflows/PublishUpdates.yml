@@ -84,7 +84,7 @@ jobs:
         id: downloadfile # Remember to give an ID if you need the output filename
         run: |
           wget -c ${{ env.artifact_url }} -O ./${{ env.name }}.apk
-      - name: "Echo download path"
+      - name: 'Echo download path'
         run: echo "apk_file=./${{ env.name }}.apk" >> $GITHUB_ENV
       - name: Create Release
         id: create_release
@@ -92,8 +92,8 @@ jobs:
         env:
           GITHUB_TOKEN:: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "v${{ env.version }}"
-          release_name: "${{ env.name }}: release ${{ env.version }}"
+          tag_name: 'v${{ env.version }}'
+          release_name: '${{ env.name }}: release ${{ env.version }}'
           draft: false
       - name: Upload Release Asset
         id: upload-release-asset

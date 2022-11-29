@@ -6,7 +6,7 @@ import {
   Text,
 } from 'react-native';
 
-interface iButtonProps extends TouchableOpacityProps {
+interface IButtonProps extends TouchableOpacityProps {
   buttonText: string;
   handlePress(): void;
   width?: number;
@@ -19,7 +19,7 @@ export default function DefaultButton({
   width,
   height,
   ...rest
-}: iButtonProps) {
+}: IButtonProps) {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
