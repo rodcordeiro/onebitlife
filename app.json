@@ -3,9 +3,14 @@
     "name": "onebitlife",
     "slug": "onebitlife",
     "version": "1.0.0",
+    "owner": "rodcordeiro",
+    "privacy": "public",
+    "githubUrl": "https://github.com/rodcordeiro/onebitlife",
+    "backgroundColor": "#FF3838",
+    "primaryColor": "#FF3838",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -24,7 +29,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.rodcordeiro.onebitlife",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
