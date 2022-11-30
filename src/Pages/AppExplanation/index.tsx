@@ -2,10 +2,15 @@ import React, { useCallback } from 'react';
 import { View, ScrollView, StyleSheet, Text } from 'react-native';
 import DefaultButton from '../../Components/Common/DefaultButton';
 import ExplanationCard from '../../Components/Explanation/ExplanationCard';
+import { useNavigation } from '@react-navigation/native';
 
 export default function AppExplanationPage() {
-  const handleSetShowHome = useCallback(() => {
-    console.log('teste');
+  const navigation = useNavigation();
+
+  
+  const handleNavHome = useCallback(() => {
+    // @ts-ignore
+    navigation.navigate('HomePage');
   }, []);
   return (
     <View style={styles.container}>
@@ -24,7 +29,7 @@ export default function AppExplanationPage() {
           </Text>
           <DefaultButton
             buttonText="Continuar"
-            handlePress={handleSetShowHome}
+            handlePress={handleNavHome}
             width={250}
             height={50}
           />
